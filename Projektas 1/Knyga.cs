@@ -16,6 +16,7 @@ namespace Projektas_1
         public double Savikaina { get; private set; }
         public int Kiekis { get; private set; }
 
+
         public Knyga (string pavadinimas, string autorius, int puslapiai, string zanras, double kaina, double savikaina, int kiekis)
         {
             Pavadinimas = pavadinimas;

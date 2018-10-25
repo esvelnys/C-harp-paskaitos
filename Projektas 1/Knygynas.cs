@@ -10,9 +10,9 @@ namespace Projektas_1
     {
         public string Pavadinimas { get; private set; }
         public string Adresas { get; private set; }
-        public List<Knyga>Knygos { get; private set; }
+        public List<Knyga> Knygos { get; private set; }
 
-        public Knygynas (string pavadinimas,string adresas, List<Knyga> knygos)
+        public Knygynas(string pavadinimas, string adresas, List<Knyga> knygos)
         {
             Pavadinimas = pavadinimas;
             Adresas = adresas;
@@ -31,45 +31,35 @@ namespace Projektas_1
                 knyga.Isvedimas();
             }
 
-           
-            var didziausia = DidziausiaKnyga();
-            didziausia.Isvedimas();
+
+            var brangiausia = BrangiausiaKnyga();
+            brangiausia.Isvedimas();
             Console.WriteLine("----------------");
-            Console.WriteLine("Didziausia knyga");
-            DidziausiaKnyga().Isvedimas();
+            Console.WriteLine("Brangiausia knyga");
+            BrangiausiaKnyga().Isvedimas();
             Console.WriteLine("---------------");
 
         }
-        public Knyga DidziausiaKnyga()
+        public Knyga BrangiausiaKnyga()
         {
-            var didziausia = Knygos.First();
+            var brangiausia = Knygos.First();
 
             foreach (var knyga in Knygos)
-                if (knyga.Puslapiai > didziausia.Puslapiai)
+                if (knyga.Kaina > brangiausia.Kaina)
 
                 {
-                    didziausia = knyga;
+                    brangiausia = knyga;
                 }
-            return didziausia;
 
-        }
+            return brangiausia;
 
-       
+        }        
+            
 
-
-
-
-
-
-
-
-        //rasti bendra visu knygu apyvarta
-        //ant kiekvienos knygos naudojant apyvartos metoda is knygos klases
-        //parasyti siuos metodus:
-        // - brangiausia knyga
-        // - pigiausia knyga
-        // - bendras visu knygu puslapiu skaicius
-        // - kainos vidurkis
     }
+
+
+          
+
     }
 

@@ -24,7 +24,7 @@ namespace Projektas_1
             Console.WriteLine("Knygyno pavadinimas: " + Pavadinimas);
             Console.WriteLine(" Jis randasi adresu: " + Adresas);
             Console.WriteLine("-----------");
-            Console.WriteLine("Jame turimos knygos: ");
+            Console.WriteLine("Turimos knygos: ");
             Console.WriteLine("------------");
             foreach (var knyga in Knygos)
             {
@@ -54,7 +54,13 @@ namespace Projektas_1
 
         }
 
-        
+       
+
+
+
+
+
+
 
 
         //rasti bendra visu knygu apyvarta
